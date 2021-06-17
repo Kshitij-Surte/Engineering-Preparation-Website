@@ -1,0 +1,52 @@
+body{
+    padding: 20px;
+    padding-top: 0;
+    margin: 0;
+    background-color: #f4eee8;
+}
+
+.outer{
+    box-shadow: 5px 5px 3px #f5cebe;
+    background-color: #114e60;
+    border-radius: 5px;
+    padding: 10px;
+    height: 204px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+.year{
+    text-align: center;
+    margin-top: 0;
+    font-size: 30px;
+    color: #f8f5f1;
+    font-family: 'Orbitron', sans-serif;
+}
+.flex
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 5px ;
+}
+
+.component{
+    color: #9e9d89;
+    margin: 0;
+    font-family: 'Mate SC', serif;
+}
+
+.heading{
+    margin-top: 2px;
+    font-size: 40px;
+    margin-bottom: 5px;
+    font-family: 'Bangers', cursive;
+    color: #f8f5f1;
+}
+
+.body{
+    line-height: 2;
+    margin: 2px 2px;
+    font-size: 20px;
+    color: #bdc7c9;
+    font-family: 'Playfair Display', serif;
+}

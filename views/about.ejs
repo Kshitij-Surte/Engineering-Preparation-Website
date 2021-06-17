@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+      <!-- bootstrap links  -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script defer src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <!-- google fonts  -->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Lobster&family=Merienda&family=Yanone+Kaffeesatz:wght@300&display=swap" rel="stylesheet">
+     <!-- Logo font link  -->
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">      
+      <!-- css link  -->
+      <link rel="stylesheet" href="css/about.css">
+      <!-- favicon link -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg" >
+    <a class="navbar-brand" href="/"  style="color: #e93b81; font-family: 'Pattaya', sans-serif;">ARC</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="color: #e93b81;">=</span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="/" style="color: #a9f1df">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/about" style="color: #a9f1df">About<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login" style="color: #a9f1df">Teacher login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/announcement" style="color: #a9f1df">Announcement</a>
+        </li>
+        <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" style="color: #a9f1df" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Classes
+            </a>
+            <div class="dropdown-menu" style="border: none; background-color: #334443;" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="fe" style="color: wheat;">FE</a>
+              <a class="dropdown-item" href="secomps" style="color: wheat;">SE-Comps</a>
+              <div class="dropdown-divider" ></div>
+            </div>
+          </li> -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" style="color: #a9f1df" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ChatRoom
+            </a>
+            <div class="dropdown-menu" style="border: none; background-color: #334443;" aria-labelledby="navbarDropdown">
+              <% chatroom.forEach(room => { %>
+              <a class="dropdown-item" href="/doubtroom/<%= room %>" style="color: wheat;"><%= room %></a>
+              <% }); %>
+              <!-- <div class="dropdown-divider"></div> -->
+            </div>
+          </li>
+      </ul>
+      <form action="/search" method="POST" class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search">
+        <button class="btn my-2 my-sm-0 btn-outline-success"  type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+   <!-- this is the description section -->
+   <section>
+    <h1 class="heading">Project Description</h1>
+    <p class="paramiddle color">
+        A-Z material is provided for students pursuing engineering.
+    </p>
+    <p class="paramiddle color" >
+        or 
+    </p>
+    <p class="paralast color">
+    A complete guide for students pursuing engineering.Notes,Past year question papers are provided. 
+    Apart from engineering,students can also prepare for competitive exams like GRE,TOEFL,etc. 
+    Students can refer to the notes provided by their respective teachers/faculties and make notes about the same. 
+    Teachers can directly convey any important message/announcement to the students, instead of relying on CR or a single student.
+    ///ANNOUNCEMENT CAN ONLY BE DONE BY TEACHERS.///
+    Students and teachers can have direct one to one or a group discussion,and  any doubts,etc. can be cleared in chat room.
+    </p>
+
+  </section>
+  <!-- this sections is for dev-team info  -->
+  <section>
+    <h1 class="heading">Developer's Team</h1>
+      <div class="row">
+          <div class="col-lg-3 col-md-6 middle">
+              <img src="img/Kshitij.jpeg" alt="name" class="image">
+              <h2 class="name">Kshitij Surte</h2>
+              <h4 class="font">SE-comps</h4>
+              <h4 class="font">Universal College of Engg</h4>
+          </div>
+          <div class="col-lg-3 col-md-6 middle">
+              <img src="img/Tejal.jpeg" alt="name" class="image">
+              <h2 class="name">Tejal Mackwana</h2>
+              <h4 class="font">SE-comps</h4>
+              <h4 class="font">Universal College of Engg</h4>
+          </div>
+          <div class="col-lg-3 col-md-6 middle">
+              <img src="img/Rushab.jpeg" alt="name" class="image">
+              <h2 class="name">Rushabh Udani</h2>
+              <h4 class="font">SE-comps</h4>
+              <h4 class="font">Universal College of Engg</h4>
+          </div>
+          <div class="col-lg-3 col-md-6 middle">
+              <img src="img/Jinesh.jpeg" alt="name" class="image"> 
+              <h2 class="name">Jinesh Shah</h2>
+              <h4 class="font">SE-comps</h4>
+              <h4 class="font">Universal College of Engg</h4>
+          </div>
+
+      </div>
+  </section>
+
+  <footer class="text-center">
+    <div class="card-body">
+      <% var d = new Date(); %>
+      <% var n = d.getFullYear(); %>
+      <!-- <h5 class="card-title"> Copyright <%= n %>.ARC  </h5> -->
+      <p class="card-text" style="margin-bottom: -5px; font-family: 'Lobster', cursive;"><span>&#169;</span> Copyright <%= n %>.ARC  </p>
+      <p style="    text-align: center; color: #afb9c8; font-size: 10px; margin-top: 4px;">
+        All Rights Reserved
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

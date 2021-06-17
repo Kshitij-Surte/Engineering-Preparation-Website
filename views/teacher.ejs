@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teacherlogin</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- bootstrap js  -->
+        <script defer src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Girassol&family=Goblin+One&display=swap" rel="stylesheet">
+    <!-- favicon link -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+   
+    <style>
+        body{
+            background: #bdd2b6;
+            padding: 14px;
+        }
+        .head {
+            font-size: 4vh;
+            font-weight: bold;
+            font-family: 'Goblin One', cursive;
+            
+        }
+
+        .subhead {
+            font-size: 25px;
+            font-family: 'Arvo', serif;
+        }
+
+        fieldset {
+            box-shadow: 5px 5px 3px grey;
+            background-color: #ffffff;
+            padding: 16px;
+            border-radius: 22px;
+        }
+        .btn{
+            font-size: 20px;
+            font-family: 'Libre Franklin', sans-serif;
+            border-radius: 4px;
+            background: rgb(39, 90, 185);
+            color: white;
+            padding: 2px 10px 2px 10px;
+        }
+        .fill{
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend class="head">Upload Files</legend>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <br>
+            <label class="subhead"> Year :</label>
+            <input type="text" name="year" placeholder="Eg : FE , SE-Comps" class="fill"><br><br>
+            <label class="subhead">Subject :</label>
+            <input type="text" name="subject" placeholder="Eg : Maths 4" class="fill" ><br><br>
+            <label class="subhead">Topic :</label>
+            <input type="text" name="topic" placeholder="Eg : Complex Integration" class="fill"><br><br>
+            <label class="form-check-label" for="exampleCheck1"> Filename Format : YearBranch_Subjectname_topicname_feild</label>
+            <br>
+            <label class="form-check-label" for="exampleCheck1">EG Filename : SeComps_maths3_laplace_notes</label>
+            <br>
+            <br>
+            <label class="subhead">Notes File : </label>
+            <input type="file" name="notes" class="fill"><br><br><br>
+
+            <label class="subhead">Formulae File :</label>
+            <input type="file" name="formulae" class="fill"><br><br><br>
+
+            <label class="subhead">Past-year Questions File : </label>
+            <input type="file" name="py" class="fill"><br><br><br>
+
+            <label class="subhead">Competative Notes File : </label>
+            <input type="file" name="competativeNotes" class="fill"><br><br>
+
+                <button type="submit" class="btn">Upload</button>
+        </form>
+    </fieldset>
+    <br><br>
+
+    <fieldset>
+        <legend class="head">Update File</legend>
+        <br>
+        <form action="/update" method="post">
+            <input type="file" name="replacefile" class="fill">
+            <p class="subhead">"Make sure the filename matches the filename that is to be replace"</p>
+            <button type="submit" class="btn">Replace</button>
+        </form>
+    </fieldset>
+    <br><br>
+
+
+    <fieldset>
+        <legend class="head">Create Chat Room</legend><br>
+        <form action="/createRoom" method="post">
+            <label class="subhead">Enter Room Name : </label>
+            <input type="text" name="roomName" class="fill"><br><br>
+            <button type="submit" class="btn">Create Room</button>
+        </form>
+    </fieldset>
+    <br><br>
+
+    <fieldset>
+        <legend class="head">Make a New Announcement</legend><br>
+        <form action="/newAnnouncement" method="post">
+
+            <label class="subhead">Year and Branch :</label>
+            <input type="text" name="year" placeholder="Eg: Fe, Se comps, etc" class="fill"><br><br>
+
+            <label class="subhead">Teacher Name :</label>
+            <input type="text" name="teacherName" class="fill"><br><br>
+
+            <label class="subhead">Date :</label>
+            <input type="text" name="date" placeholder="DD/MM/YYYY" class="fill"><br><br>
+
+            <label class="subhead">Heading :</label>
+            <input type="text" name="announcementHeading" class="fill"><br><br>
+
+            <label class="subhead">Body :</label>
+            <input type="text" name="announcementBody" class="fill"><br><br>
+
+            <button type="submit" class="btn">Submit</button>
+
+        </form>
+    </fieldset><br>
+</body>
+
+</html>

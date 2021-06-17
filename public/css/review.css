@@ -1,0 +1,39 @@
+body{
+    padding: 24px;
+    margin: 0;
+    background-color: #f8f5f1;
+}
+.color{
+    /* background-color: blue; */
+    border: 2px solid gray;
+    box-shadow: 5px 5px 3px gray;
+    width: 100%;
+    height: 373px;
+    overflow-y: auto;
+    padding: 5px;
+    background-color: #d8e3e7;
+}
+.name
+{
+    margin-bottom: -5px;
+}
+.name1{
+    font-family: 'Supermercado One', cursive;
+    margin-top: 5px;
+}
+.email{
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+.heading{
+    font-weight: bolder;
+    color: #126e82;
+    font-family: 'Bangers', cursive;
+    font-family: 'Permanent Marker', cursive;
+}
+.info{
+    font-family: 'Orelega One', cursive
+}
+.feedback{
+    margin-bottom: 10px;
+}

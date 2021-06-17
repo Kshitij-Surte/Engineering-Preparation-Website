@@ -1,0 +1,47 @@
+.sublist
+{
+    width: 70%;
+    /* border: 2px solid red; */
+    overflow-y: auto;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 3px gray;
+    background-color: #eeeeee;
+    padding: 3px;
+    margin: auto;
+
+}
+.simple
+{
+    /* border: 2px solid red; */
+    padding: 3px;
+    /* margin: 2px 10px; */
+    margin: auto;
+}
+.subhead
+{
+    /* border: 2px solid purple; */
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+}
+.sublist ul
+{
+    padding: 7px;
+}
+.sublist ul li 
+{
+    list-style: none;
+}
+
+.sublist ul li a
+{
+    text-decoration: none;
+    font-weight: bold;
+    color: #1eae98;
+    font-family: 'Goblin One', cursive;
+}
+body
+{
+    background-color: #faf3f3;
+    padding: 10px;
+}

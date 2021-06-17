@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <!-- bootstrap links  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script defer src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- google font links -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Orelega+One&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap" rel="stylesheet">
+     <!-- Logo font link  -->
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+    <!-- css file link  -->
+    <link rel="stylesheet" href="css/review.css">
+    <!-- favicon link -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg" >
+    <a class="navbar-brand" href="/" style="color: #233e8b; font-family: 'Pattaya', sans-serif;">ARC</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="color: #2f5d62;">=</span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="/" style="color: #2f5d62">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/about" style="color: #2f5d62">About<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login" style="color: #2f5d62">Teacher login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/announcement" style="color: #2f5d62">Announcement</a>
+        </li>
+        <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" style="color: #2f5d62" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Classes
+            </a>
+            <div class="dropdown-menu bg-light" style="border: none;" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="fe">FE</a>
+              <a class="dropdown-item" href="secomps">SE-Comps</a>
+              <div class="dropdown-divider" ></div>
+            </div>
+          </li> -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" style="color: #2f5d62" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ChatRoom
+            </a>
+            <div class="dropdown-menu bg-light" style="border: none;" aria-labelledby="navbarDropdown">
+              <% chatroom.forEach(room => { %>
+              <a class="dropdown-item" href="/doubtroom/<%= room %>"><%= room %></a>
+              <% }); %>
+              <!-- <div class="dropdown-divider"></div> -->
+            </div>
+          </li>
+      </ul>
+      <form action="/search" method="POST" class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search">
+        <button class="btn my-2 my-sm-0 btn-outline-success"  type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+    <div class="row">
+        <div class="col-lg-6">
+                <h1 class="heading">Add a Review</h1>
+                <form action="/newreview" method="POST">
+                    <div class="form-group">
+                      <label class="info">Name</label>
+                      <input name="username" type="text" class="form-control" id="exampleFormControlInput1">
+                    </div>
+                    <div class="form-group">
+                      <label class="info">Email address</label>
+                      <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlSelect1" class="info">Rate us</label>
+                      <select name="rating" class="form-control" id="exampleFormControlSelect1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1" class="info">Help Us Improve</label>
+                      <textarea name="feedback" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-outline-success">Submit</button>
+                  </form>
+        </div>
+        <div class="col-lg-6 ">
+          <!-- const reviewsample = new review({
+            name: usernaam,
+            email: emailid,
+            rating: rating,
+            feedback: feedback
+        });
+        reviewsample.save(); -->
+            <h1 class="heading"> Past Reviews</h1>
+            <div class="color"> 
+              <% reviews.forEach(review => { %>
+                <h3 class="name name1"><%= review.name %></h3>
+                <p class="email"><%= review.email %></p>
+                <h5 class="name"><%= review.rating %>/10</h5>
+                <p class="name feedback" ><%= review.feedback %></p>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

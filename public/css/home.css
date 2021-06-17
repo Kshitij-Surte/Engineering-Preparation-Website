@@ -1,0 +1,95 @@
+.navji{
+    background-color:#233e8b;
+}
+.logo{
+    height:50px;
+    width:px;
+}
+
+#what-we-provide-section
+{
+    /* border: 2px solid red; */
+    background-color: #ffffc7;
+    padding: 20px;
+}
+.section-cards 
+{
+    margin: auto;
+}
+.section-head
+{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-family: 'Goblin One', cursive;
+}
+.card
+{
+    box-shadow: 5px 5px 3px gray;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: #e4efe7;
+    width: 90%;
+    
+}
+.card-head
+{
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Lemon', cursive;
+    margin-top: -33px;
+    color: blue;
+}
+.card-body
+{
+     font-size: 20px;
+     text-align: center;
+     line-height: 2;
+     font-family: 'Lemonada', cursive;
+     font-weight: 900;
+}
+
+
+.sublist
+{
+    width: 70%;
+    /* border: 2px solid red; */
+    overflow-y: auto;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 3px gray;
+    background-color: #eeeeee;
+    padding: 3px;
+    margin: auto;
+
+}
+.simple
+{
+    /* border: 2px solid red; */
+    padding: 3px;
+    /* margin: 2px 10px; */
+    margin: auto;
+}
+.subhead
+{
+    /* border: 2px solid purple; */
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+}
+.sublist ul li a
+{
+    text-decoration: none;
+    font-weight: bold;
+    color: #1eae98;
+    font-family: 'Goblin One', cursive;
+}
+#subjectsection
+{
+    background-color: #faf3f3;
+    padding: 10px;
+}
+@media screen and (min-width: 700px) and (max-width: 768px) {
+    .sublist{
+        width: 90%;
+    }
+  }
